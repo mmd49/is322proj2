@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import Task from './Tasks';
+import TaskList from './TaskList';
 import AddTask from './AddTask';
 
 class App extends React.Component {
@@ -43,7 +43,7 @@ class App extends React.Component {
         return (
             <div className="container">
                 <AddTask onSubmit={this.onAddTask} />
-                <List tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
+                <TaskList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
             </div>
         );
     }
