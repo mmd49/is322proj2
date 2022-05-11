@@ -4,6 +4,7 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import TaskList from './TaskList';
+import DoneList from './DoneList';
 import AddTask from './AddTask';
 
 class App extends React.Component {
@@ -41,13 +42,22 @@ class App extends React.Component {
         this.setState({ tasks: newTaskList });
     }
 
+
     render() {
         return (
             <div className="container">
+                <h1>To Do List</h1>
+                <br/>
                 <AddTask onSubmit={this.onAddTask} />
                 <TaskList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
+                <br/>
+                <h1>Done</h1>
+                <br/>
+                <DoneList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
             </div>
+
         );
+
     }
 }
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 import TaskItem from './TaskItem';
 
+
 class TaskList extends React.Component {
 
     markDone = (task) => {
@@ -14,8 +15,9 @@ class TaskList extends React.Component {
 
     render() {
         const taskItems = this.props.tasks.map(task => {
-            return <TaskItem task={task} key={task.id} markDone={this.markDone} />
+            return <TaskItem task={task} key={task.id} status={task.column} markDone={this.markDone} />
         });
+
 
         return (
             <ul className="task-list list-group">
