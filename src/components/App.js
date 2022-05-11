@@ -53,7 +53,7 @@ class App extends React.Component {
                 <br/>
                 <h1>Done</h1>
                 <br/>
-                <DoneList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
+                <TaskList tasks={this.state.tasks} onUpdateTaskList={this.onUpdateTaskList} />
             </div>
 
         );
